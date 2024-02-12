@@ -28,5 +28,5 @@ ENV PORT=7777
 
 EXPOSE ${PORT}
 
-CMD node server.js
+CMD npm run build && npm run preview
 
