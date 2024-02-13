@@ -36,3 +36,11 @@ for port mapping to work correctly --host is used on the vite dev command
 "scripts": {
     "dev": "vite --host", -> this over here 
   },
+
+# build docker image 
+
+$ docker build -t [TAG] .
+
+# run the container with HMR 
+
+$ docker run -p 8080:5173 -v "$(pwd):/app" -v /app/node_modules [TAG]

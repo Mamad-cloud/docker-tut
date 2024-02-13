@@ -10,6 +10,12 @@ COPY package*.json .
 
 # RUN npm ci should be the case when there already exists a package-lock.json file 
 
+USER root
+
+RUN chown -R app:app /app
+
+USER app
+
 RUN npm install
 
 COPY . .
