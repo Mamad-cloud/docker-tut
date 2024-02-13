@@ -9,4 +9,3 @@ See hello-docker
 See light-node 
 
 <strong>2: Docker React ⚛</strong>
-soon..
