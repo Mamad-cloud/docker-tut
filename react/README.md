@@ -39,8 +39,10 @@ for port mapping to work correctly --host is used on the vite dev command
 
 # build docker image 
 
+```bash
 $ docker build -t [TAG] .
-
+```
 # run the container with HMR 
-
+```bash
 $ docker run -p 8080:5173 -v "$(pwd):/app" -v /app/node_modules [TAG]
+```
