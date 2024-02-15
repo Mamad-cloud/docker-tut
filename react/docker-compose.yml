@@ -1,0 +1,26 @@
+services:
+  app:
+    build: .
+    container_name: react-app
+    command: npm run dev
+    ports:
+      - 5173:5173 # there needs to be a whitespace between the hyphen and the values
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+      - /app/node_modules
+    # establish docker compose watch mode
+    develop:
+      # specify the files to watch for changes
+      watch:
+        # it'll watch for changes in package.json and package-lock.json and rebuild the container and image if there are any changes
+        - path: ./package.json
+          action: rebuild
+        - path: ./package-lock.json
+          action: rebuild
+        
+        # it'll watch for changes in the backend directory and sync the changes with the container real time
+        - path: ./src/
+          target: /app
+          action: sync
