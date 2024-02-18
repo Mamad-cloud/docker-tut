@@ -9,10 +9,10 @@ services:
     ports:
       - 3000:3000 # there needs to be a whitespace between the hyphen and the values
     volumes:
-      - type: bind
+      - type: bind # this is a bind mount (for development)
         source: .
         target: /app
-      - /app/node_modules
+      - /app/node_modules # this is a volume 
     # establish docker compose watch mode
     develop:
       # specify the files to watch for changes
