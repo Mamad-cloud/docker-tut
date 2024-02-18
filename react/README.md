@@ -33,10 +33,7 @@ export default {
 
 for port mapping to work correctly --host is used on the vite dev command
 
-"scripts": {
-    "dev": "vite --host", -> this over here 
-  },
-
+"scD
 # build docker image 
 
 ```bash
@@ -44,5 +41,5 @@ $ docker build -t [TAG] .
 ```
 # run the container with HMR 
 ```bash
-$ docker run -p 8080:5173 -v "$(pwd):/app" -v /app/node_modules [TAG]
+$ docker compose up 
 ```
