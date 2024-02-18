@@ -21,7 +21,7 @@ function App() {
           <img src={dockerLogo} className="logo docker" alt="Docker logo" />
         </a>
       </div>
-      <h1>Vite + React + Docker + 🍆 </h1>
+      <h1>Vite + React + Docker + 🍆 + </h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

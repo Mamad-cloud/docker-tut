@@ -3,8 +3,11 @@ services:
     build: .
     container_name: react-app
     command: npm run dev
+    # maybe remove this
+    expose:
+      - 3000
     ports:
-      - 5173:5173 # there needs to be a whitespace between the hyphen and the values
+      - 3000:3000 # there needs to be a whitespace between the hyphen and the values
     volumes:
       - type: bind
         source: .
