@@ -33,7 +33,6 @@ export default {
 
 for port mapping to work correctly --host is used on the vite dev command
 
-"scD
 # build docker image 
 
 ```bash
@@ -42,4 +41,11 @@ $ docker build -t [TAG] .
 # run the container with HMR 
 ```bash
 $ docker compose up 
+```
+
+the watch option should be set accordingly in the <code>vite.config.ts</code>
+```js
+  watch: {
+      usePolling: true
+    }
 ```
